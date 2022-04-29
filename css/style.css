@@ -71,6 +71,10 @@ footer{
      text-shadow: -1px -1px 1px rgba(0,0,0,.75);
      text-align: center;
 }
+footer a{
+     color:#828383;
+     font-weight: 300;
+}
 
 /******************************************
 /* LAYOUT (That is, making things go in the right place)
