@@ -23,13 +23,25 @@
 body{
      background: #d4d9dd url("images/bg03.jpg");
      font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
-     text-align: center;
 }
 ul{
      list-style: none;
      padding: 0;
 }
-
+h1, h2{
+     padding-top: 1rem; /*Putting a little space on the top of our boxes*/
+     text-align: center;
+}
+/**********************************************
+/* BASE STYLE HACKS aka MAKING THE CSS BEHAVE in very specific cases.
+**********************************************/
+.padBottom{
+     padding-bottom: 1rem;
+}
+.centerBox{
+     display: flex;
+     justify-content: center;
+}
 /********************************************
 /* COLORS, BACKGROUNDS, FONTS, AND TEXTURES
 *********************************************/
@@ -44,20 +56,26 @@ p{
 header {
      background: #3b4346 url("images/bg01.jpg");
 }
-nav ul{
+nav ul, footer{
      background: #353d40 url("images/bg02.jpg");
      border-top: solid 1px #272e31;
      border-bottom: solid 1px #272e31;
 }
-main > section{
+.boxWithShadow{
      background: #fff;
      box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.1);
+     margin-bottom: 2rem;
+}
+footer{
+     color:#828383;
+     text-shadow: -1px -1px 1px rgba(0,0,0,.75);
+     text-align: center;
 }
 
 /******************************************
 /* LAYOUT (That is, making things go in the right place)
 /*******************************************/
-#Providers, #Directions > div{
+.twoColContainer{
      display: flex;
      flex-direction: column;
 }
@@ -66,7 +84,8 @@ header ul{
      justify-content: space-evenly;
 }
 header li{
-     margin: 10px;
+     margin-top: 10px;
+     margin-bottom: 10px;
 }
 main > section{
      max-width: 90%;
@@ -74,6 +93,12 @@ main > section{
 }
 p{
      margin: 1.3rem;
+}
+h3, address li{
+     margin-left: 1.3rem;
+}
+footer p{
+     margin: 0.5rem;
 }
 
 
@@ -92,10 +117,11 @@ a:hover{
 /* DESKTOP-SPECIFIC STYLES (Making things go in the right place when not on mobile)
 /*******************************************/
 @media all and (min-width: 801px){
-     #Providers, #Directions > div{
+     .twoColContainer{
           flex-direction: row;
+          justify-content: space-around;
      }
-     #Providers section{
+     /*#Providers */.twoColContainer > section/*section*/{
           max-width: 50%;
      }
 }
