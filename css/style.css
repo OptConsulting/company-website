@@ -23,6 +23,8 @@
 body{
      background: #d4d9dd url("images/bg03.jpg");
      font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+     color:#d4d9dd;
+     font-size: 1.3rem;
 }
 ul{
      list-style: none;
@@ -45,31 +47,46 @@ h1, h2{
 /********************************************
 /* COLORS, BACKGROUNDS, FONTS, AND TEXTURES
 *********************************************/
-a{
-     color: #e0e8eb;
-     font-weight: 200;
+li a{
+     color: #5f9fff;
+     font-weight: 300;
+     font-size: 1.4rem;
+}
+li:nth-child(2) a{
+     color: #00fe6d;
 }
 p{
      font-weight: 300;
-     line-height: 1.3rem;
+     line-height: 1.6rem;
 }
 header {
-     background: #3b4346 url("images/bg01.jpg");
+     background: #fff;
 }
 nav ul, footer{
-     background: #353d40 url("images/bg02.jpg");
+     background: #3b4346 url("images/bg01.jpg");
      border-top: solid 1px #272e31;
      border-bottom: solid 1px #272e31;
 }
 .boxWithShadow{
-     background: #fff;
+     background: #353d40 url("images/bg02.jpg");
      box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.1);
      margin-bottom: 2rem;
+}
+.twoColContainer figcaption{
+     color: #5f9fff;
+     font-size: 1.2rem;
+}
+.twoColContainer section+section figcaption, .mailingAddress{
+     color: #00fe6d;
+}
+.officeAddress{
+     color: #5f9fff;
 }
 footer{
      color:#828383;
      text-shadow: -1px -1px 1px rgba(0,0,0,.75);
      text-align: center;
+     font-size: 1rem;
 }
 footer a{
      color:#828383;
@@ -110,7 +127,7 @@ footer p{
 /******************************************
 /* ADDITIONAL STYLES (Decorations and glam)
 /*******************************************/
-a{
+a, figcaption, h1, h2, h3, p, address{
      text-shadow: -1px -1px 1px rgba(0,0,0,.75);
 }
 a:hover{
@@ -120,7 +137,7 @@ a:hover{
 /******************************************
 /* DESKTOP-SPECIFIC STYLES (Making things go in the right place when not on mobile)
 /*******************************************/
-@media all and (min-width: 801px){
+@media all and (min-width: 1000px){
      .twoColContainer{
           flex-direction: row;
           justify-content: space-around;
