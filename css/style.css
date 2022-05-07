@@ -40,10 +40,6 @@ h1, h2{
 .padBottom{
      padding-bottom: 1rem;
 }
-.centerBox{
-     display: flex;
-     justify-content: center;
-}
 /********************************************
 /* COLORS, BACKGROUNDS, FONTS, AND TEXTURES
 *********************************************/
@@ -54,6 +50,17 @@ li a{
 }
 li:nth-child(2) a{
      color: #00fe6d;
+}
+.letterheadContainer address{
+     color: #000;
+     font-style: normal;
+     align-self: center;
+}
+.letterheadContainer address a{
+     font-weight: 400;
+}
+.letterheadContainer address li:nth-child(2) a{
+     color: #00c652; /*I think this looks okay on white background without being too drab*/
 }
 p{
      font-weight: 300;
@@ -96,11 +103,15 @@ footer a{
 /******************************************
 /* LAYOUT (That is, making things go in the right place)
 /*******************************************/
+.letterheadContainer{
+     display: flex;
+     justify-content: space-evenly;
+}
 .twoColContainer{
      display: flex;
      flex-direction: column;
 }
-header ul{
+nav ul{
      display: flex;
      justify-content: space-evenly;
 }
@@ -122,13 +133,14 @@ footer p{
      margin: 0.5rem;
 }
 
-
-
 /******************************************
 /* ADDITIONAL STYLES (Decorations and glam)
 /*******************************************/
-a, figcaption, h1, h2, h3, p, address{
+a, figcaption, h1, h2, h3, p, .mailingAddress, .officeAddress{
      text-shadow: -1px -1px 1px rgba(0,0,0,.75);
+}
+.letterheadContainer address a{
+     text-shadow: none;
 }
 a:hover{
      text-decoration: none;
@@ -136,7 +148,17 @@ a:hover{
 
 /******************************************
 /* DESKTOP-SPECIFIC STYLES (Making things go in the right place when not on mobile)
+/* Also includes an OLD-MOBILE specific style (for the small screens, like my old phone)
 /*******************************************/
+@media all and (max-width: 512px){
+     .letterheadContainer{
+          flex-direction: column;
+     }
+     .letterheadContainer img{
+          max-width: 196px; /*TODO: Get a higher resolution image from client*/
+          align-self: center;
+     }
+}
 @media all and (min-width: 1000px){
      .twoColContainer{
           flex-direction: row;
