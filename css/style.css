@@ -168,6 +168,9 @@ a:hover{
           max-width: 196px; /*TODO: Get a higher resolution image from client*/
           align-self: center;
      }
+     li a{
+          font-size: 1.2rem;
+     }
 }
 @media all and (min-width: 600px){
      #Directions .twoColContainer{
