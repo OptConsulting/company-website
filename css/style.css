@@ -37,6 +37,9 @@ h1, h2{
 /**********************************************
 /* BASE STYLE HACKS aka MAKING THE CSS BEHAVE in very specific cases.
 **********************************************/
+.padTop{
+     padding-top: 1rem;
+}
 .padBottom{
      padding-bottom: 1rem;
 }
@@ -139,6 +142,13 @@ iframe{
 .mapContainer{
      margin: 5px;
 }
+.mailingAddress{
+     text-align: right;
+     padding-bottom: 0.1rem;
+}
+.mailingAddress > *{
+     margin-right: 1rem;
+}
 
 /******************************************
 /* ADDITIONAL STYLES (Decorations and glam)
@@ -176,9 +186,12 @@ a:hover{
      }
 }
 @media all and (min-width: 600px){
-     #Directions .twoColContainer{
+     .twoColContainer{
           flex-direction: row;
           justify-content: space-around;
+     }
+     .officeAddress, .mailingAddress{
+      justify-self: center;
      }
 }
 @media all and (min-width: 1000px){
