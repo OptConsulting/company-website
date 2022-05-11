@@ -80,10 +80,10 @@ nav ul, footer{
      color: #5f9fff;
      font-size: 1.2rem;
 }
-.twoColContainer section+section figcaption, .mailingAddress{
+.twoColContainer figcaption, .officeAddress{
      color: #00fe6d;
 }
-.officeAddress{
+.mailingAddress{
      color: #5f9fff;
 }
 footer{
