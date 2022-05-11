@@ -48,9 +48,6 @@ li a{
      font-weight: 300;
      font-size: 1.4rem;
 }
-li:nth-child(2) a{
-     color: #00fe6d;
-}
 .letterheadContainer address{
      color: #000;
      font-style: normal;
@@ -59,7 +56,7 @@ li:nth-child(2) a{
 .letterheadContainer address a{
      font-weight: 400;
 }
-.letterheadContainer address li:nth-child(2) a{
+.greenLink{
      color: #00c652; /*I think this looks okay on white background without being too drab*/
 }
 p{
@@ -170,6 +167,9 @@ a:hover{
      }
      li a{
           font-size: 1.2rem;
+     }
+     nav li a{
+          font-size: 1rem;
      }
 }
 @media all and (min-width: 600px){
