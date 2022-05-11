@@ -21,7 +21,7 @@
 /* BASE STYLES
 /*******************************************/
 body{
-     background: #d4d9dd url("images/bg03.jpg");
+     background: #d4d9dd url("images/bg05_midsatura.jpg");
      font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
      color:#d4d9dd;
      font-size: 1.3rem;
@@ -151,6 +151,9 @@ a, figcaption, h1, h2, h3, p, .mailingAddress, .officeAddress{
 }
 a:hover{
      text-decoration: none;
+}
+.boxWithShadow{
+     border-radius: 5px;
 }
 
 /******************************************
