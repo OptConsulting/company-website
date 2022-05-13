@@ -143,7 +143,7 @@ iframe{
      margin: 5px;
 }
 .mailingAddress{
-     text-align: right;
+     /*text-align: right;*/ /*I'll ask if they want this right-aligned or not, but I think it looks a bit better left-aligned.*/
      padding-bottom: 0.1rem;
 }
 .mailingAddress > *{
