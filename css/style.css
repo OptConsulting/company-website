@@ -79,10 +79,13 @@ nav ul, footer{
      box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.1);
      margin-bottom: 2rem;
 }
-#About img{
+.framedImage{
      border-radius: 5px;
      background: #fff url("images/bg04.png");
-     padding: 10px
+     padding: 10px;
+}
+figure .framedImage{
+     max-height: 400px;
 }
 .twoColContainer figcaption{
      color: #5f9fff;
@@ -128,7 +131,7 @@ main > section{
      max-width: 90%;
      margin: auto;
 }
-#About img{
+.framedImage{
      max-width: 90%;
      margin: auto;
 }
@@ -206,8 +209,14 @@ a:hover{
           flex-direction: row;
           justify-content: space-around;
      }
+     .twoColContainer > section{
+          max-width: 50%;
+     }
      .officeAddress, .mailingAddress{
       justify-self: center;
+     }
+     #Providers .twoColContainer section + section{
+          border-left: 2px solid #272c30;
      }
 }
 @media all and (min-width: 780px){
@@ -241,9 +250,9 @@ a:hover{
           flex-direction: row;
           align-items: space-evenly;
      }
-     .twoColContainer > section{
+     /*.twoColContainer > section{
           max-width: 50%;
-     }
+     }*/
      .directionsContainer div{
           width: 50%;
      }
