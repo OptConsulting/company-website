@@ -161,6 +161,10 @@ iframe{
 .mailingAddress > *{
      margin-right: 1rem;
 }
+#Directions .imgWithOverlay img{
+     display: none;
+     visibility: hidden;
+}
 
 /******************************************
 /* ADDITIONAL STYLES (Decorations and glam)
@@ -212,11 +216,36 @@ a:hover{
      .twoColContainer > section{
           max-width: 50%;
      }
-     .officeAddress, .mailingAddress{
-      justify-self: center;
-     }
      #Providers .twoColContainer section + section{
           border-left: 2px solid #272c30;
+     }
+     #Directions img{
+          max-width: 50%;
+          margin: 0;
+     }
+     #Directions .twoColContainer{
+          justify-content: space-between;
+          align-items: flex-end;
+     }
+     .imgWithOverlay{
+          position: relative;
+     }
+     #Directions .imgWithOverlay img{
+          display:block;
+          visibility: visible;
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+     }
+     #Directions .officeAddress{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding-right: 0.7em;
+          margin-right: 0.5em;
+          margin-bottom: 0.5em;
+          background:rgba(61, 61, 61, 0.8);
+          border-radius: 5px 0 0 0;
      }
 }
 @media all and (min-width: 780px){
@@ -248,7 +277,6 @@ a:hover{
      }
      .twoColContainer, .directionsContainer{
           flex-direction: row;
-          align-items: space-evenly;
      }
      /*.twoColContainer > section{
           max-width: 50%;
