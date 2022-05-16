@@ -18,6 +18,66 @@
 }
 
 /******************************************
+/* LOADING UP LOCAL FONTS
+******************************************/
+/* yanone-kaffeesatz-200 - latin */
+@font-face {
+     font-family: 'Yanone Kaffeesatz';
+     font-style: normal;
+     font-weight: 200;
+     src: url('fonts/yanone-kaffeesatz-v23-latin-200.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('fonts/yanone-kaffeesatz-v23-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('fonts/yanone-kaffeesatz-v23-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+          url('fonts/yanone-kaffeesatz-v23-latin-200.woff') format('woff'), /* Modern Browsers */
+          url('fonts/yanone-kaffeesatz-v23-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('fonts/yanone-kaffeesatz-v23-latin-200.svg#YanoneKaffeesatz') format('svg'); /* Legacy iOS */
+   }
+   
+   /* yanone-kaffeesatz-300 - latin */
+   @font-face {
+     font-family: 'Yanone Kaffeesatz';
+     font-style: normal;
+     font-weight: 300;
+     src: url('fonts/yanone-kaffeesatz-v23-latin-300.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('fonts/yanone-kaffeesatz-v23-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('fonts/yanone-kaffeesatz-v23-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+          url('fonts/yanone-kaffeesatz-v23-latin-300.woff') format('woff'), /* Modern Browsers */
+          url('fonts/yanone-kaffeesatz-v23-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('fonts/yanone-kaffeesatz-v23-latin-300.svg#YanoneKaffeesatz') format('svg'); /* Legacy iOS */
+   }
+   
+   /* yanone-kaffeesatz-regular - latin */
+   @font-face {
+     font-family: 'Yanone Kaffeesatz';
+     font-style: normal;
+     font-weight: 400;
+     src: url('fonts/yanone-kaffeesatz-v23-latin-regular.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('fonts/yanone-kaffeesatz-v23-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('fonts/yanone-kaffeesatz-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('fonts/yanone-kaffeesatz-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
+          url('fonts/yanone-kaffeesatz-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('fonts/yanone-kaffeesatz-v23-latin-regular.svg#YanoneKaffeesatz') format('svg'); /* Legacy iOS */
+   }
+
+   /* indie-flower-regular - latin */
+@font-face {
+     font-family: 'Indie Flower';
+     font-style: normal;
+     font-weight: 400;
+     src: url('fonts/indie-flower-v17-latin-regular.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('fonts/indie-flower-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('fonts/indie-flower-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('fonts/indie-flower-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+          url('fonts/indie-flower-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('fonts/indie-flower-v17-latin-regular.svg#IndieFlower') format('svg'); /* Legacy iOS */
+   }
+   
+   
+/******************************************
 /* BASE STYLES
 /*******************************************/
 body{
@@ -65,7 +125,7 @@ header p{
      text-align: center;
      margin-top: 0;
      padding-top: 1em;
-     font-family: 'Indie Flower', 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+     font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
 }
 .greenLink{
      color: #00c652; /*I think this looks okay on white background without being too drab*/
