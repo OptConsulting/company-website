@@ -198,7 +198,7 @@ a:hover{
           flex-direction: column;
      }
      .letterheadContainer img{
-          max-width: 196px; /*TODO: Get a higher resolution image from client*/
+          max-width: 250px;
           align-self: center;
      }
      li a{
