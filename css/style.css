@@ -127,15 +127,9 @@ header p{
      padding-top: 1em;
      font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
 }
-.greenLink{
-     color: #00c652; /*I think this looks okay on white background without being too drab*/
-}
 p{
      font-weight: 300;
      line-height: 1.6rem;
-}
-header {
-     background: #fff;
 }
 nav ul, footer{
      background: #3b4346 url("images/bg01.jpg");
@@ -159,7 +153,7 @@ figure .framedImage{
      color: #5f9fff;
      font-size: 1.2rem;
 }
-.twoColContainer figcaption, .officeAddress{
+.twoColContainer figcaption, .officeAddress, .greenLink{
      color: #00fe6d;
 }
 .mailingAddress{
@@ -240,7 +234,7 @@ iframe{
 a, figcaption, h1, h2, h3, p, .mailingAddress, .officeAddress, footer{
      text-shadow: -1px -1px 1px rgba(0,0,0,.75);
 }
-.letterheadContainer address a, header p{
+header p{
      text-shadow: none;
 }
 a:hover{
