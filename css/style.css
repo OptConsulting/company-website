@@ -82,9 +82,9 @@
 /* BASE STYLES
 /*******************************************/
 body{
-     background: #d4d9dd url("images/bg05_midsatura.jpg");
+     background: #dadfe2 url("images/bg06.jpg");
      font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
-     color:#d4d9dd;
+     color:#dadfe2;
      font-size: 1.3rem;
 }
 ul{
