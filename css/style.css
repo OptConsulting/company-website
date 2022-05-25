@@ -294,8 +294,11 @@ a:hover{
           margin: 0;
      }
      #Directions .twoColContainer{
-          justify-content: space-between;
+          justify-content: space-evenly;
           align-items: flex-end;
+     }
+     #Directions .twoColContainer > *{
+          max-width: 49%;
      }
      .imgWithOverlay{
           position: relative;
