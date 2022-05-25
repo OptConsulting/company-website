@@ -130,6 +130,9 @@ header p{
      padding-top: 1em;
      font-family: 'Satisfy', Arial, Helvetica, sans-serif;
 }
+.greenLink{
+     color: #00c652; /*I think this looks okay on white background without being too drab*/
+}
 p{
      font-weight: 300;
      line-height: 1.6rem;
@@ -156,7 +159,7 @@ figure .framedImage{
      color: #5f9fff;
      font-size: 1.5rem;
 }
-.twoColContainer figcaption, .officeAddress, .greenLink{
+.twoColContainer figcaption, .officeAddress{
      color: #00fe6d;
 }
 .mailingAddress{
@@ -237,7 +240,7 @@ iframe{
 a, figcaption, h1, h2, h3, p, .mailingAddress, .officeAddress, footer{
      text-shadow: -1px -1px 1px rgba(0,0,0,.75);
 }
-header p{
+.letterheadContainer address a, header p{
      text-shadow: none;
 }
 a:hover{
