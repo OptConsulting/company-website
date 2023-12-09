@@ -215,7 +215,7 @@ footer p{
 iframe{
 	align-self: center;
 	justify-self: center;
-	aspect-ratio: 1024 / 713; /*This is the ratio of the image to the iframe's left.*/
+	aspect-ratio: 5 / 3; /*This is the ratio of the image to the iframe's left.*/
 	width: 98%;
 	z-index: 1;
 	margin-top: 5px;
