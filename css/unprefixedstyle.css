@@ -215,12 +215,10 @@ footer p{
 iframe{
 	align-self: center;
 	justify-self: center;
-	min-height: 450px;
-	width: 100%;
+	aspect-ratio: 1024 / 713; /*This is the ratio of the image to the iframe's left.*/
+	width: 98%;
 	z-index: 1;
-}
-.mapContainer{
-	margin: 5px;
+	margin-top: 5px;
 }
 .mailingAddress{
 	/*text-align: right;*/ /*I'll ask if they want this right-aligned or not, but I think it looks a bit better left-aligned.*/
@@ -229,10 +227,7 @@ iframe{
 .mailingAddress > *{
 	margin-right: 1rem;
 }
-#Directions .imgWithOverlay img{
-	display: none;
-	visibility: hidden;
-}
+
 
 /******************************************
 /* ADDITIONAL STYLES (Decorations and glam)
@@ -286,6 +281,10 @@ a:hover{
 		 flex-direction: row;
 		 justify-content: space-around;
 	}
+	/*These three lines are a hack to make the updated site work after feature creep*/
+	#Directions .twoColContainer{
+		flex-direction: column;
+	}
 	.twoColContainer > section, .fourColContainer > section{
 		 max-width: 50%;
 	}
@@ -301,37 +300,6 @@ a:hover{
 		border-left: 2px solid #272c30;
 	}
 	/*End fourCol border shenanigans.*/
-	#Directions img{
-		 max-width: 50%;
-		 margin: 0;
-	}
-	#Directions .twoColContainer{
-		 justify-content: space-evenly;
-		 align-items: flex-end;
-	}
-	#Directions .twoColContainer > *{
-		 max-width: 49%;
-	}
-	.imgWithOverlay{
-		 position: relative;
-	}
-	#Directions .imgWithOverlay img{
-		 display:block;
-		 visibility: visible;
-		 max-width: 100%;
-		 width: 100%;
-		 height: auto;
-	}
-	#Directions .officeAddress{
-		 position: absolute;
-		 bottom: 0;
-		 right: 0;
-		 padding-right: 0.7em;
-		 margin-right: 0.5em;
-		 margin-bottom: 0.5em;
-		 background:rgba(61, 61, 61, 0.8);
-		 border-radius: 5px 0 0 0;
-	}
 }
 @media all and (min-width: 780px){
 	#About .twoColContainer{
@@ -344,19 +312,19 @@ a:hover{
 		 max-height: 520px;
 		 margin-right: 1rem;
 	}
-	/*
-	.fourColContainer{
-		flex-direction: row;
-		justify-content: space-around;
+
+	#Directions img{
+		max-width: 50%;
+		margin: 0;
    }
-   .fourColContainer > section{
-	max-width: 25%;
-	}
-	.fourColContainer section + section{
-		border-left: 2px solid #272c30;
-		border-top: 0;
-	}
-	*/
+   #Directions .twoColContainer{
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: flex-end;
+   }
+   #Directions .twoColContainer > *{
+		max-width: 49%;
+   }
 }
 @media all and (min-width: 876px){
 	#About img{
