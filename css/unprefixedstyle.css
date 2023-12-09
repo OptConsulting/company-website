@@ -159,7 +159,7 @@ figure .framedImage{
 	color: #5f9fff;
 	font-size: 1.5rem;
 }
-.twoColContainer figcaption, .fourColContainer figcaption, .officeAddress{
+.twoColContainer figcaption, .fourColContainer figcaption, .officeAddress h3, .officeAddress address{
 	color: #00fe6d;
 }
 .mailingAddress{
@@ -221,7 +221,6 @@ iframe{
 	margin-top: 5px;
 }
 .mailingAddress{
-	/*text-align: right;*/ /*I'll ask if they want this right-aligned or not, but I think it looks a bit better left-aligned.*/
 	padding-bottom: 0.1rem;
 }
 .mailingAddress > *{
