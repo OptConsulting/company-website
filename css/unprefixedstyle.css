@@ -219,7 +219,8 @@ iframe{
 	width: 98%;
 	z-index: 1;
 	margin-top: 5px;
-	/*This line assures that people blocking Google Maps still have a map of some sort*/
+	/*This line provides people blocking Google Maps with an error message,
+	instead of just an empty iframe*/
 	background: no-repeat center url("images/errorMessage.png");
 
 }
