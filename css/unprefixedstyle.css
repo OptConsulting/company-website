@@ -219,6 +219,9 @@ iframe{
 	width: 98%;
 	z-index: 1;
 	margin-top: 5px;
+	/*This line assures that people blocking Google Maps still have a map of some sort*/
+	background: no-repeat center url("images/errorMessage.png");
+
 }
 .mailingAddress{
 	padding-bottom: 0.1rem;
