@@ -288,7 +288,7 @@ a:hover{
 	#Directions .twoColContainer{
 		flex-direction: column;
 	}
-	.twoColContainer > section, /*.fourColContainer > section*/{
+	.twoColContainer > section/*, .fourColContainer > section*/{
 		 max-width: 50%;
 	}
 	.threeColContainer{
