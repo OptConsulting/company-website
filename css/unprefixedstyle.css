@@ -187,9 +187,10 @@ footer a{
 	flex-direction: column;
 }
 nav{
-	position: fixed;
+	position: sticky;
 	top: 0;
 	width: 100%;
+	z-index: 2;
 }
 nav ul{
 	display: flex;
@@ -197,7 +198,7 @@ nav ul{
 	flex-wrap: wrap;
 	margin-top: 0;
 }
-header li{
+header li, nav li{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
