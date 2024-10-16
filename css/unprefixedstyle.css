@@ -75,7 +75,16 @@
 		 url('fonts/satisfy-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 		 url('fonts/satisfy-v17-latin-regular.svg#Satisfy') format('svg'); /* Legacy iOS */
   }
-  
+
+  /* Whisper-Regular - latin*/
+  /* TODO: add the other formats of this font, not just TTF */
+  @font-face {
+	font-family: 'Whisper';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('fonts/Whisper-Regular.ttf') format('truetype') /* Safari, Android, iOS */
+  }
   
   
 /******************************************
@@ -125,10 +134,10 @@ header p{
 	color: #000;
 	font-weight: 600;
 	text-align: center;
-	font-size: 1.6em;
+	font-size: 1.9em;
 	margin-top: 0;
 	padding-top: 1em;
-	font-family: 'Satisfy', Arial, Helvetica, sans-serif;
+	font-family: 'Whisper', Arial, Helvetica, sans-serif;
 }
 .greenLink{
 	color: #00c652; /*I think this looks okay on white background without being too drab*/
