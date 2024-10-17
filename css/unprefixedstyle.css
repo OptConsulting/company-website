@@ -266,6 +266,13 @@ a:hover{
 .threeColContainer section + section{
 	border-top: 2px solid #272c30;
 }
+main > section::before{
+	margin-top: 1px;
+	height: 1px;
+	display: block;
+	content:"";
+	visibility: hidden;
+}
 
 /******************************************
 /* DESKTOP-SPECIFIC STYLES (Making things go in the right place when not on mobile)
