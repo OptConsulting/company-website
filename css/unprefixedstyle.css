@@ -266,7 +266,11 @@ a:hover{
 .threeColContainer section + section{
 	border-top: 2px solid #272c30;
 }
-main > section::before{
+/*Nav-doesn't-overlap-the-header hack:
+/*This actually changes the CSS a little bit when you use the nav,
+/*but it's so subtle you wouldn't know unless you were reading this CSS right now.
+/*Hi btw.*/
+main > section:target:before{
 	margin-top: 1px;
 	height: 1px;
 	display: block;
