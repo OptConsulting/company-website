@@ -315,21 +315,21 @@ main > section:target:before{
 	#Directions .twoColContainer{
 		flex-direction: column;
 	}
-	.twoColContainer > section/*, .fourColContainer > section*/{
+	.twoColContainer > section, .threeColContainer > section{
 		 max-width: 50%;
 	}
 	.threeColContainer{
 		flex-wrap: wrap;
 	}
-	/*fourCol Border shenanigans HERE.
-	This is for the 2x2 layout that appears from 600px to 1210px. When there's not six providers. I'm leaving it here just in case it's needed later.
-	.fourColContainer section:nth-child(2){
+	/*fourCol Border shenanigans HERE.*/
+	/*Also works when we have six items here. Or any even number, for that matter.*/
+	.threeColContainer section:nth-child(2){
 		border-top:0;
 	}
-	.fourColContainer section:nth-child(even){
+	.threeColContainer section:nth-child(even){
 		border-left: 2px solid #272c30;
 	}
-	End fourCol border shenanigans.*/
+	/*End fourCol border shenanigans.*/
 }
 @media all and (min-width: 780px){
 	#About .twoColContainer{
@@ -355,19 +355,6 @@ main > section:target:before{
    #Directions .twoColContainer > *{
 		max-width: 49%;
 	}
-	/*Pasting in these lines from an old git revision, so... TODO: Make sure this actually looks good*/
-   .threeColContainer{
-		flex-direction: row;
-		justify-content: space-around;
-	}
-	.threeColContainer > section{
-		max-width: 33.33%;
-	}
-	.threeColContainer section + section{
-		border-left: 2px solid #272c30;
-		border-top: 0;
-	}
-	/*END git-pasting shenanigans*/
 }
 @media all and (min-width: 876px){
 	#About img{
@@ -396,17 +383,19 @@ main > section:target:before{
 		 margin-right: auto;
 	}
 }
-/* Four column container isn't in current revision, so we'll comment this out, save the renderer a little work.
+
 @media all and (min-width: 1210px){
-	.fourColContainer{
+	.threeColContainer{
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	.fourColContainer > section{
-	max-width: 25%;
+	.threeColContainer > section{
+	max-width: 33.33%;
 	}
-	.fourColContainer section + section{
+	.threeColContainer section + section{
 		border-left: 2px solid #272c30;
-		border-top: 0;
 	}
-}*/
+	.threeColContainer section:nth-child(3){
+		border-top:0;
+	}
+}
