@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: last 4 version
+* Browsers: last 8 version
 */
 
 /* Box Model Hack */
@@ -83,7 +83,16 @@
 		 url('fonts/satisfy-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 		 url('fonts/satisfy-v17-latin-regular.svg#Satisfy') format('svg'); /* Legacy iOS */
   }
-  
+
+  /* Whisper-Regular - latin*/
+  /* TODO: add the other formats of this font, not just TTF */
+  @font-face {
+	font-family: 'Whisper';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('fonts/Whisper-Regular.ttf') format('truetype') /* Safari, Android, iOS */
+  }
   
   
 /******************************************
@@ -135,10 +144,10 @@ header p{
 	color: #000;
 	font-weight: 600;
 	text-align: center;
-	font-size: 1.6em;
+	font-size: 2.3em;
 	margin-top: 0;
 	padding-top: 1em;
-	font-family: 'Satisfy', Arial, Helvetica, sans-serif;
+	font-family: 'Whisper', Arial, Helvetica, sans-serif;
 }
 .greenLink{
 	color: #00c652; /*I think this looks okay on white background without being too drab*/
@@ -166,11 +175,11 @@ nav ul, footer{
 figure .framedImage{
 	max-height: 400px;
 }
-.twoColContainer figcaption, .fourColContainer figcaption{
+.twoColContainer figcaption, .threeColContainer figcaption{
 	color: #5f9fff;
 	font-size: 1.5rem;
 }
-.twoColContainer figcaption, .fourColContainer figcaption, .officeAddress h3, .officeAddress address{
+.twoColContainer figcaption, .threeColContainer figcaption, .officeAddress h3, .officeAddress address{
 	color: #00fe6d;
 }
 .mailingAddress{
@@ -197,7 +206,7 @@ footer a{
 	    -ms-flex-pack: space-evenly;
 	        justify-content: space-evenly;
 }
-.twoColContainer, .fourColContainer, .directionsContainer{
+.twoColContainer, .threeColContainer, .directionsContainer{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -205,6 +214,12 @@ footer a{
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+}
+nav{
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 }
 nav ul{
 	display: -webkit-box;
@@ -215,8 +230,9 @@ nav ul{
 	        justify-content: space-evenly;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
+	margin-top: 0;
 }
-header li{
+header li, nav li{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -275,8 +291,19 @@ a:hover{
 .boxWithShadow{
 	border-radius: 5px;
 }
-.fourColContainer section + section{
+.threeColContainer section + section{
 	border-top: 2px solid #272c30;
+}
+/*Nav-doesn't-overlap-the-header hack:
+/*This actually changes the CSS a little bit when you use the nav,
+/*but it's so subtle you wouldn't know unless you were reading this CSS right now.
+/*Hi btw.*/
+main > section:target:before{
+	margin-top: 1px;
+	height: 1px;
+	display: block;
+	content:"";
+	visibility: hidden;
 }
 
 /******************************************
@@ -289,6 +316,9 @@ a:hover{
 		 -webkit-box-direction: normal;
 		     -ms-flex-direction: column;
 		         flex-direction: column;
+	}
+	header p{
+		line-height: 2.2rem;
 	}
 	.letterheadContainer img{
 		 max-width: 250px;
@@ -317,7 +347,7 @@ a:hover{
 	#About img{
 		 max-width: 75%;
 	}
-	.twoColContainer, .fourColContainer{
+	.twoColContainer, .threeColContainer{
 		 -webkit-box-orient: horizontal;
 		 -webkit-box-direction: normal;
 		     -ms-flex-direction: row;
@@ -332,19 +362,19 @@ a:hover{
 		    -ms-flex-direction: column;
 		        flex-direction: column;
 	}
-	.twoColContainer > section, .fourColContainer > section{
+	.twoColContainer > section, .threeColContainer > section{
 		 max-width: 50%;
 	}
-	.fourColContainer{
+	.threeColContainer{
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
-	/*fourCol Border shenanigans HERE.
-	This is for the 2x2 layout that appears from 600px to 1210px:*/
-	.fourColContainer section:nth-child(2){
+	/*fourCol Border shenanigans HERE.*/
+	/*Also works when we have six items here. Or any even number, for that matter.*/
+	.threeColContainer section:nth-child(2){
 		border-top:0;
 	}
-	.fourColContainer section:nth-child(even){
+	.threeColContainer section:nth-child(even){
 		border-left: 2px solid #272c30;
 	}
 	/*End fourCol border shenanigans.*/
@@ -379,14 +409,9 @@ a:hover{
 		-webkit-box-align: end;
 		    -ms-flex-align: end;
 		        align-items: flex-end;
-   }
+	}
    #Directions .twoColContainer > *{
 		max-width: 49%;
-   }
-}
-@media all and (min-width: 876px){
-	#About img{
-		 margin-bottom: 1rem;
 	}
 }
 @media all and (min-width: 1000px){
@@ -405,7 +430,7 @@ a:hover{
 		 font-size: 1.1em;
 		 line-height: 1.3;
 	}
-	.twoColContainer, .directionsContainer, .fourColContainer{
+	.twoColContainer, .directionsContainer, .threeColContainer{
 		 -webkit-box-orient: horizontal;
 		 -webkit-box-direction: normal;
 		     -ms-flex-direction: row;
@@ -420,8 +445,9 @@ a:hover{
 		 margin-right: auto;
 	}
 }
+
 @media all and (min-width: 1210px){
-	.fourColContainer{
+	.threeColContainer{
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: row;
@@ -429,11 +455,13 @@ a:hover{
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
 	}
-	.fourColContainer > section{
-	max-width: 25%;
+	.threeColContainer > section{
+	max-width: 33.33%;
 	}
-	.fourColContainer section + section{
+	.threeColContainer section + section{
 		border-left: 2px solid #272c30;
-		border-top: 0;
+	}
+	.threeColContainer section:nth-child(3){
+		border-top:0;
 	}
 }
