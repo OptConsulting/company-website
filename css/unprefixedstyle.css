@@ -356,11 +356,6 @@ main > section:target:before{
 		max-width: 49%;
 	}
 }
-@media all and (min-width: 876px){
-	#About img{
-		 margin-bottom: 1rem;
-	}
-}
 @media all and (min-width: 1000px){
 	#About .twoColContainer div{
 		 display: flex;
