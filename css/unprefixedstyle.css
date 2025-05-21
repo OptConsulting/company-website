@@ -187,6 +187,11 @@ footer a{
 	color:#828383;
 	font-weight: 300;
 }
+header{
+	background-image: url("../assets/Options-Consulting_Olympia_WA__300_medres.jpg");
+	background-size:cover;
+	background-position: 50% 27%;
+}
 
 /******************************************
 /* LAYOUT (That is, making things go in the right place)
