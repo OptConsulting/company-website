@@ -127,12 +127,15 @@ li a{
 	font-size: 1.4rem;
 }
 .letterheadContainer address{
-	color: #000;
+	color: #dadfe2;
 	font-style: normal;
 	align-self: center;
 }
 .letterheadContainer address a{
 	font-weight: 400;
+}
+.letterheadContainer{
+	color: #dadfe2;
 }
 header p{
 	color: #000;
@@ -145,6 +148,9 @@ header p{
 }
 .greenLink{
 	color: #00c652; /*I think this looks okay on white background without being too drab*/
+}
+.paleLink{
+	color:#dadfe2;
 }
 p{
 	font-weight: 300;
@@ -196,9 +202,17 @@ header{
 /******************************************
 /* LAYOUT (That is, making things go in the right place)
 /*******************************************/
+header{
+	display: flex;
+	flex-direction: column-reverse;
+}
 .letterheadContainer{
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: right;
+	margin-right: 20px;
+}
+p.letterheadContainer{
+	justify-content: left;
 }
 .twoColContainer, .fourColContainer, .directionsContainer{
 	display: flex;
@@ -263,8 +277,9 @@ iframe{
 a, figcaption, h1, h2, h3, p, .mailingAddress, .officeAddress, footer{
 	text-shadow: -1px -1px 1px rgba(0,0,0,.75);
 }
-.letterheadContainer address a, header p{
-	text-shadow: none;
+
+.letterheadContainer address a, .letterheadContainer{
+	text-shadow: 1px 1px 2px #000;
 }
 a:hover{
 	text-decoration: none;
@@ -291,16 +306,12 @@ main > section:target:before{
 /* DESKTOP-SPECIFIC STYLES (Making things go in the right place when not on mobile)
 /* Also includes an OLD-MOBILE specific style (for the small screens, like my old phone)
 /*******************************************/
-@media all and (max-width: 512px){
+@media all and (max-width: 550px){
 	.letterheadContainer{
 		 flex-direction: column;
 	}
 	header p{
 		line-height: 2.2rem;
-	}
-	.letterheadContainer img{
-		 max-width: 250px;
-		 align-self: center;
 	}
 	li a{
 		 font-size: 1.2rem;
