@@ -118,6 +118,9 @@ h1, h2{
 .padBottom{
 	padding-bottom: 1rem;
 }
+#About .framedImage{
+	background: #dadfe2 url("images/bg06.jpg");
+}
 /********************************************
 /* COLORS, BACKGROUNDS, FONTS, AND TEXTURES
 *********************************************/
@@ -362,7 +365,7 @@ main > section:target:before{
 		 max-width: 50%;
 	}
 	#About img{
-		 max-height: 520px;
+		 max-height: 250px;
 		 margin-right: 1rem;
 	}
 
