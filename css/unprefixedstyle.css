@@ -133,7 +133,7 @@ li a{
 .letterheadContainer address{
 	color: #dadfe2;
 	font-style: normal;
-	align-self: center;
+	align-self: flex-end;
 }
 .letterheadContainer address a{
 	font-weight: 400;
@@ -209,11 +209,15 @@ header{
 header{
 	display: flex;
 	flex-direction: column-reverse;
+	min-height: 360px;
 }
 .letterheadContainer{
 	display: flex;
 	justify-content: right;
 	margin-right: 20px;
+}
+div.letterheadContainer{
+	margin-bottom: 12rem;
 }
 p.letterheadContainer{
 	justify-content: left;

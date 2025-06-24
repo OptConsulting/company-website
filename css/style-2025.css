@@ -128,6 +128,7 @@ h1, h2{
 }
 #About .framedImage{
 	background: #dadfe2 url("images/bg06.jpg");
+	margin-top: 1rem;
 }
 /********************************************
 /* COLORS, BACKGROUNDS, FONTS, AND TEXTURES
@@ -140,9 +141,8 @@ li a{
 .letterheadContainer address{
 	color: #dadfe2;
 	font-style: normal;
-	-ms-flex-item-align: center;
-	    -ms-grid-row-align: center;
-	    align-self: center;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 .letterheadContainer address a{
 	font-weight: 400;
@@ -224,6 +224,7 @@ header{
 	-webkit-box-direction: reverse;
 	    -ms-flex-direction: column-reverse;
 	        flex-direction: column-reverse;
+	min-height: 360px;
 }
 .letterheadContainer{
 	display: -webkit-box;
@@ -233,6 +234,9 @@ header{
 	    -ms-flex-pack: right;
 	        justify-content: right;
 	margin-right: 20px;
+}
+div.letterheadContainer{
+	margin-bottom: 12rem;
 }
 p.letterheadContainer{
 	-webkit-box-pack: left;
