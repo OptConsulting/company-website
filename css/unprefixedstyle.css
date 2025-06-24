@@ -120,6 +120,7 @@ h1, h2{
 }
 #About .framedImage{
 	background: #dadfe2 url("images/bg06.jpg");
+	margin-top: 1rem;
 }
 /********************************************
 /* COLORS, BACKGROUNDS, FONTS, AND TEXTURES
